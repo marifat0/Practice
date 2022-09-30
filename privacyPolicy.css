@@ -1,0 +1,20 @@
+.articleBg {
+    background-color: white;
+}
+section {
+    display: inline-block;
+    width: 90%;
+    text-align: center !important;
+}
+#site-link >* {
+    color: black !important;
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+.nopad {
+    padding: 0 !important;
+}
+.first {
+    display: block;
+}

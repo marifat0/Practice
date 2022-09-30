@@ -1,0 +1,36 @@
+article {
+    margin: auto;
+    text-align: center;
+    background-color: white;
+}
+.section1 {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px 50px 10px 50px;
+}
+.articlePadding {
+    padding: 0;
+}
+.description {
+    text-align: left;
+}
+.lottie {
+    margin: auto;
+}
+.section2 {
+    padding: 0;
+}
+.sctnh2 {
+    margin-left: 50px;
+    margin-top: 70px;
+    font-size: 45px;
+}
+.photo1 {
+    float: left;
+}
+.photocapt {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    text-align: left;
+
+}

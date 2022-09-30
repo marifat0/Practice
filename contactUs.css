@@ -1,0 +1,15 @@
+.articleBg {
+    background-color: white;
+}
+.contctUs {
+    max-width: 10em;
+    background-color: #2222f380 !important;
+    border-radius: 1em;
+}
+.contctUs:hover {
+    background-color: #8331cbfa !important;
+}
+.men {
+    background-color: #4831cbfa !important;
+    border: transparent !important;
+}
