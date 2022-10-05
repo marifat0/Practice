@@ -1,0 +1,10 @@
+.articleBg {
+    background-color: white;
+}
+section {
+    display: inline-block;
+}
+.first {
+    margin: 0px 20px;
+    text-align: left;
+}
