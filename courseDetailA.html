@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="commonFeatures.css">
         <link rel="stylesheet" href="/courseDetailA.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+        <script src="/jquery-3.6.1.js"></script>
     </head>
     <body>
         <header>
@@ -46,9 +46,9 @@
                     <ul class="menu">
                         <li class="active"><span><a href="/course.html">Course</a></span></li>
                         <li><span><a href="/courseDetailA.html">Course A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Course B</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule B</a></span></li>
+                        <li><span><a href="/courseDetailB.html">Course B</a></span></li>
+                        <li><span><a href="/scheduleA.html">Schedule&nbspA</a></span></li>
+                        <li><span><a href="/scheduleB.html">Schedule&nbspB</a></span></li>
                     </ul>
                 </div></li>
                 <li><div class="dropup">
@@ -98,13 +98,30 @@
             <div class="articleBg">
                 <h1 style="color: cornflowerblue;">Course A</h1>
                 <h3>Software Engineering</h3>
+                <p>Choose your interest</p>
+                <div class="table-container"><table>
+                    <tbody>
+                    <tr class="tabs-menu">
+
+                        <td id="menu1"><span class="tabs">Front-end</span></td>
+                        <td id="menu2"><span class="tabs">Back-end</span></td>
+                        <td id="menu3"><span class="tabs">UX Study</span></td>
+                        <td id="menu4"><span class="tabs">UI&nbspStudy</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border: 1px solid black; height: 200px;"></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+                
             <section class="first">
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sed obcaecati rem corporis maiores, 
                 autem unde sequi! Officiis ut assumenda ab numquam corporis earum quas facere excepturi, delectus maiores 
                 eveniet quo tempore quisquam? Veritatis quo animi soluta 
                 voluptate enim ab deleniti cumque rerum obcaecati aspernatur possimus vel, maiores, sunt alias?</p>
             </section>
-            
+            <button id="register">Apply now!</button>
             
             </div>
     </article>
@@ -124,6 +141,79 @@
            
             <!---Script-->
             <script src="homePages.js"></script>
+            <script>
+                //TABS1
+            $(document).ready();
+            $("#menu1").hover(function() {
+            $("#menu1").animate({
+                height: 60,
+                top: 23,
+            
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu1").mouseleave(function () {
+            $("#menu1").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS2
+            $("#menu2").hover(function() {
+            $("#menu2").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu2").mouseleave(function () {
+            $("#menu2").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS3
+            $("#menu3").hover(function() {
+            $("#menu3").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu3").mouseleave(function () {
+            $("#menu3").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS4
+            $("#menu4").hover(function() {
+            $("#menu4").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu4").mouseleave(function () {
+            $("#menu4").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            </script>
+
+
+
+
+
             </div>
     </article>
     </article></center>

@@ -2,9 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="commonFeatures.css">
-        <link rel="stylesheet" href="sitemap.css">
+        <link rel="stylesheet" href="scheduleA.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+        <script src="/jquery-3.6.1.js"></script>
     </head>
     <body>
         <header>
@@ -46,9 +46,9 @@
                     <ul class="menu">
                         <li class="active"><span><a href="/course.html">Course</a></span></li>
                         <li><span><a href="/courseDetailA.html">Course A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Course B</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule B</a></span></li>
+                        <li><span><a href="/courseDetailB.html">Course B</a></span></li>
+                        <li><span><a href="/scheduleA.html">Schedule&nbspA</a></span></li>
+                        <li><span><a href="/scheduleB.html">Schedule&nbspB</a></span></li>
                     </ul>
                 </div></li>
                 <li><div class="dropup">
@@ -96,47 +96,119 @@
         
     <center><article>
             <div class="articleBg">
-                <h1 style="color: cornflowerblue;">Sitemap</h1>
+                <h1 style="color: cornflowerblue;">Schedule A</h1>
+                <h3>SE Schedule</h3>
+                <p>Select Time Period</p>
+                <div class="table-container"><table>
+                    <tbody>
+                    <tr class="tabs-menu">
+
+                        <td id="menu1"><span class="tabs">1st Year</span></td>
+                        <td id="menu2"><span class="tabs">2nd Year</span></td>
+                        <td id="menu3"><span class="tabs">3rd Year</span></td>
+                        <td id="menu4"><span class="tabs">4th Year</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="border: 1px solid black; height: 200px;"></td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+                
             <section class="first">
-                <h2 style="text-align: center; padding: 0;">Home</h2>
-                
-                    <p>Welcome</p>
-                    <p>Partners</p>
-                    <p>Sitemap</p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sed obcaecati rem corporis maiores, 
+                autem unde sequi! Officiis ut assumenda ab numquam corporis earum quas facere excepturi, delectus maiores 
+                eveniet quo tempore quisquam? Veritatis quo animi soluta 
+                voluptate enim ab deleniti cumque rerum obcaecati aspernatur possimus vel, maiores, sunt alias?</p>
             </section>
-            <section class="second">
-                <h2 style="text-align: center; padding: 0;">About us</h2>
+            <button id="register">Apply now!</button>
+            
+            </div>
+    </article>
+                        
                 
-                    <p>Company Introduction</p>
-                    <p>CEO Profile</p>
-                    <p>Our Teams</p>
-                    <p>Our Teachers</p>
+        <article>
+            <div class="articleBg articlePadding">
+
+            <section id="firstSection" class="section1">
+                <p>Get to coding</p>
+                <p style="font-size: 16px;">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quas maxime ducimus nihil aut corrupti explicabo soluta molestiae,
+                     veritatis amet officiis eos voluptatum in enim! Dolor quae quis autem facilis.
+                </p>
             </section>
-            <section class="Third"><h2 style="text-align: center; padding: 0;">Course</h2>
-                
-                <p>Course list</p>
-                <p>Schedule</p>
-                <p>Teachers</p>
-                <p>Register</p>
-            </section>
-            <section class="fourth"><h2 style="text-align: center; padding: 0;">Contact Us</h2>
-                
-                <p>Company</p>
-                <p>Events</p>
-                <p>Social media</p>
-            </section>
-            <section class="fourth"><h2 style="text-align: center; padding: 0;">Gallery</h2>
-                
-                <p>E - Learning</p>
-                <p>Teams</p>
-                <p>Company office</p>
-            </section>
-            <section class="fourth"><h2 style="text-align: center; padding: 0;">Legal</h2>
-                
-                <p>privacy Policy</p>
-                <p>Terms & Conditions</p>
-                <p>Copyright</p>
-            </section>
+
+           
+            <!---Script-->
+            <script src="homePages.js"></script>
+            <script>
+                //TABS1
+            $(document).ready();
+            $("#menu1").hover(function() {
+            $("#menu1").animate({
+                height: 60,
+                top: 23,
+            
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu1").mouseleave(function () {
+            $("#menu1").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS2
+            $("#menu2").hover(function() {
+            $("#menu2").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu2").mouseleave(function () {
+            $("#menu2").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS3
+            $("#menu3").hover(function() {
+            $("#menu3").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu3").mouseleave(function () {
+            $("#menu3").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            //TABS4
+            $("#menu4").hover(function() {
+            $("#menu4").animate({
+                height: 60,
+                top: 23,
+            
+            }, 500,function(){
+                });
+            });
+            $("#menu4").mouseleave(function () {
+            $("#menu4").animate({
+                height: 24,
+                top: 59,
+            }, 500,function(){
+                });
+            });
+            </script>
             
             </div>
     </article>
