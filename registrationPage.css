@@ -1,0 +1,47 @@
+.articleBg {
+    background-color: white;
+}
+section {
+    display: inline-block;
+    width: 90%;
+    text-align: left !important;
+}
+#site-link >* {
+    color: black !important;
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+.nopad {
+    padding: 0 !important;
+}
+.first {
+    display: block;
+}
+#formLeft-align {
+    text-align: left;
+}
+input {
+    margin: 10px;
+    width: 200px;
+}
+.submitBtn {
+    color: white;
+    background-color: rgb(1, 21, 71);
+    border-radius: 0.3rem;
+    border-style: none;
+    font-size: 14px;
+    width: 100px;
+    padding: 7.8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+.submitBtn:hover {
+    background-color: #507df7;
+}
+.pingErr {
+/*    background-color: ;*/
+    color: red;
+    cursor: pointer;
+    display: none;
+}

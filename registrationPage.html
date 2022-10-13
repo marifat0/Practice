@@ -2,10 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="commonFeatures.css">
-        <link rel="stylesheet" href="scheduleB.css">
+        <link rel="stylesheet" href="registrationPage.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="/jquery-3.6.1.js"></script>
-        <title>Schedule B</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script">
+        <title>Registration</title>
+        <script src="/script.js" defer></script>
     </head>
     <body>
         <header>
@@ -47,9 +49,9 @@
                     <ul class="menu">
                         <li class="active"><span><a href="/course.html">Course</a></span></li>
                         <li><span><a href="/courseDetailA.html">Course A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Course B</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule&nbspA</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule&nbspB</a></span></li>
+                        <li><span><a href="/courseDetailB.html">Course B</a></span></li>
+                        <li><span><a href="/scheduleA.html">Schedule&nbspA</a></span></li>
+                        <li><span><a href="/scheduleB.html">Schedule&nbspB</a></span></li>
                     </ul>
                 </div></li>
                 <li><div class="dropup">
@@ -71,7 +73,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active">Gallery</li>
-                        <li>E-Learning</li>
+                        <li>E-&nbspLearning</li>
                         <li>Teams</li>
                         <li>Company Office</li>
                     </ul>
@@ -97,34 +99,12 @@
         
     <center><article>
             <div class="articleBg">
-                <h1 style="color: cornflowerblue;">Schedule B</h1>
-                <h3>CE Schedule</h3>
-                <p>Select Time Period</p>
-                <div class="table-container"><table>
-                    <tbody>
-                    <tr class="tabs-menu">
-
-                        <td id="menu1"><span class="tabs">1st Year</span></td>
-                        <td id="menu2"><span class="tabs">2nd Year</span></td>
-                        <td id="menu3"><span class="tabs">3rd Year</span></td>
-                        <td id="menu4"><span class="tabs">4th Year</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4" id="contentAJAX" style="border: 1px solid black; height: 200px;"></td>
-                    </tr>
-                </tbody>
-                </table>
-            </div>
-                
+                <h1 style="color: cornflowerblue; font-family: Dancing Script; font-size: 67px;">Signing Up</h1>
             <section class="first">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sed obcaecati rem corporis maiores, 
-                autem unde sequi! Officiis ut assumenda ab numquam corporis earum quas facere excepturi, delectus maiores 
-                eveniet quo tempore quisquam? Veritatis quo animi soluta 
-                voluptate enim ab deleniti cumque rerum obcaecati aspernatur possimus vel, maiores, sunt alias?</p>
-            </section>
-            <button id="register">Apply now!</button>
+                
             
             </div>
+        </section>
     </article>
                         
                 
@@ -132,6 +112,30 @@
             <div class="articleBg articlePadding">
 
             <section id="firstSection" class="section1">
+                <form action="#" method="get" id="form" name="newUsers"><em>Please fill this form</em><br><hr>
+                    <details class="pingErr">
+                        <summary id="err"></summary>
+                        <p id="errMessage"></p>
+                    </details>
+                    <label for="name" class="nameLab" style="margin-right: 65px;">Name</label>
+                    :<input type="text" id="neym" name="Name" aria-required="true"><br>
+                    <label for="age" class="ageLab" style="margin-right: 79px;">Age</label>
+                    :<input type="text" name="age" id="ageU"><br>
+                    <label for="phone-num" class="phonumLab" style="margin-right: 3px;">Phone number</label>
+                    :<input type="tel" name="phoneNumber" id="telnum"><br>
+                    <label for="email" class="e-mail" style="margin-right: 63px;">E-mail</label>
+                    :<input type="email" name="email" id="emailInput"><br>
+                    <label for="password" id="password" style="margin-right: 38px;">Password</label>
+                    :<input type="password" name="password" id="password">
+                    <hr>
+                    <em>Select your Course</em><br>
+                    <label for="courseA">Course A</label>
+                    <input type="radio" id="courseA" name="course" value="CourseA"><br>
+                    <label for="courseA">Course B</label>
+                    <input type="radio" id="courseB" name="course" value="CourseB"><br>
+                    <input type="submit" id="submitt" class="submitBtn">
+                </form>
+                <hr>
                 <p>Get to coding</p>
                 <p style="font-size: 16px;">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quas maxime ducimus nihil aut corrupti explicabo soluta molestiae,
@@ -143,99 +147,13 @@
             <!---Script-->
             <script src="homePages.js"></script>
             <script>
-                //NAV-BAR
                 $(document).ready(function(){
         $("center").click(function(){
         $(".menu").removeClass("menu-open")
         $(".select").removeClass("select-clicked")
     });
 });
-                //TABS1
-            $(document).ready();
-            $("#menu1").hover(function() {
-            $("#menu1").animate({
-                height: 60,
-                top: 23,
-            
-            
-            }, 500,function(){
-                });
-            });
-            $("#menu1").mouseleave(function () {
-            $("#menu1").animate({
-                height: 24,
-                top: 59,
-            }, 500,function(){
-                });
-            });
-            //TABS2
-            $("#menu2").hover(function() {
-            $("#menu2").animate({
-                height: 60,
-                top: 23,
-            
-            }, 500,function(){
-                });
-            });
-            $("#menu2").mouseleave(function () {
-            $("#menu2").animate({
-                height: 24,
-                top: 59,
-            }, 500,function(){
-                });
-            });
-            //TABS3
-            $("#menu3").hover(function() {
-            $("#menu3").animate({
-                height: 60,
-                top: 23,
-            
-            }, 500,function(){
-                });
-            });
-            $("#menu3").mouseleave(function () {
-            $("#menu3").animate({
-                height: 24,
-                top: 59,
-            }, 500,function(){
-                });
-            });
-            //TABS4
-            $("#menu4").hover(function() {
-            $("#menu4").animate({
-                height: 60,
-                top: 23,
-            
-            }, 500,function(){
-                });
-            });
-            $("#menu4").mouseleave(function () {
-            $("#menu4").animate({
-                height: 24,
-                top: 59,
-            }, 500,function(){
-                });
-            });
             </script>
-            
-            </div>
-    </article>
-                        
-                
-        <article>
-            <div class="articleBg articlePadding">
-
-            <section id="firstSection" class="section1">
-                <p>Get to coding</p>
-                <p style="font-size: 16px;">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse quas maxime ducimus nihil aut corrupti explicabo soluta molestiae,
-                     veritatis amet officiis eos voluptatum in enim! Dolor quae quis autem facilis.
-                </p>
-            </section>
-
-           
-            <!---Script-->
-            <script src="homePages.js"></script>
             </div>
     </article>
     </article></center>

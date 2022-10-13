@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="commonFeatures.css">
         <link rel="stylesheet" href="aboutUs.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-       
+        <script src="/jquery-3.6.1.js"></script>
+        <title>About - Us</title>
     </head>
     <body>
         <header>
@@ -32,7 +33,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active"><span><a href="/aboutUsPages.html">About&nbsp</a></span></li>
-                        <li>Company Introduction</li>
+                        <li>Company&nbspIntroduction</li>
                         <li>CEO Profile</li>
                         <li>Our Teams</li>
                         <li>Our Teachers</li>
@@ -122,6 +123,14 @@
             </section>
             <!---Script-->
             <script src="homePages.js"></script>
+            <script>
+                $(document).ready(function(){
+        $("center").click(function(){
+        $(".menu").removeClass("menu-open")
+        $(".select").removeClass("select-clicked")
+    });
+});
+            </script>
 <hr>
             </div>
     </article>

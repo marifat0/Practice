@@ -32,3 +32,15 @@
     text-align: center;
     margin-top: 15px;
 }
+#register {
+    padding: 1rem;
+    border-radius: 10px;
+    border-style: none;
+    color: whitesmoke;
+    background-color: #2f9debcc;
+    font-size: larger;
+}
+#register:hover {
+    color: blue;
+    background-color: #1626a2;
+}

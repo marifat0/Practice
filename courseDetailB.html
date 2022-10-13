@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="/courseDetailB.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="/jquery-3.6.1.js"></script>
+        <title>Course B</title>
     </head>
     <body>
         <header>
@@ -57,7 +58,7 @@
                         <div class="caret"></div>
                     </div>
                     <ul class="menu">
-                        <li class="active"><span><a href="/contactUsPagees.html">Contact Us!</a></span></li>
+                        <li class="active"><span><a href="/contactUsPagees.html">Contact&nbspUs!</a></span></li>
                         <li>Company</li>
                         <li>Events</li>
                         <li>Social media</li>
@@ -121,7 +122,7 @@
                 eveniet quo tempore quisquam? Veritatis quo animi soluta 
                 voluptate enim ab deleniti cumque rerum obcaecati aspernatur possimus vel, maiores, sunt alias?</p>
             </section>
-            <button id="register">Apply now!</button>
+            <button id="register" href="/registrationPage.html"><a href="registrationPage.html">Sign up now!</a></button>
             
             </div>
     </article>
@@ -142,6 +143,13 @@
             <!---Script-->
             <script src="homePages.js"></script>
             <script>
+                //NAV-BAR
+                $(document).ready(function(){
+        $("center").click(function(){
+        $(".menu").removeClass("menu-open")
+        $(".select").removeClass("select-clicked")
+    });
+});
                 //TABS1
             $(document).ready();
             $("#menu1").hover(function() {

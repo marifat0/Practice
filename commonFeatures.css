@@ -46,7 +46,7 @@ header {
 }
 /*HERE WHeRE IT'S ALL START*/
 .dropup {
-    max-width: 10em;
+    max-width: 12em;
     position: relative;
 }
 .dropup * {

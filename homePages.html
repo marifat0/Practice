@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="/homePages.css">
         <link rel="stylesheet" href="/commonFeatures.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-       
+        <script src="/jquery-3.6.1.js"></script>
+        <title>Home</title>
     </head>
     <body>
         <header>
@@ -33,7 +34,7 @@
                 </div>
                 <ul class="menu">
                     <li class="active"><span><a href="/aboutUsPages.html">About&nbsp</a></span></li>
-                    <li>Company Introduction</li>
+                    <li>Company&nbspIntroduction</li>
                     <li>CEO Profile</li>
                     <li>Our Teams</li>
                     <li>Our Teachers</li>
@@ -71,7 +72,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active">Gallery</li>
-                        <li>E-Learning</li>
+                        <li>E-&nbspLearning</li>
                         <li>Teams</li>
                         <li>Company Office</li>
                     </ul>
@@ -144,6 +145,7 @@
             <div class="articleBg articlePadding">
 
             <section id="firstSection" class="section1">
+                <button id="register" href="/registrationPage.html"><a href="registrationPage.html">Sign up now!</a></button>
                 <p>Get to coding</p>
                 <lottie-player src="/JSON/71619-coding.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>
                 <p style="font-size: 16px;">
@@ -157,6 +159,14 @@
             </section>
             <!---Script-->
             <script src="homePages.js"></script>
+            <script>
+                $(document).ready(function(){
+        $("center").click(function(){
+        $(".menu").removeClass("menu-open")
+        $(".select").removeClass("select-clicked")
+    });
+});
+            </script>
             <section id="thirdSection" class="section3">
                 <h2>Build your future here</h2>
             </section>

@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="commonFeatures.css">
         <link rel="stylesheet" href="sitemap.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+        <script src="/jquery-3.6.1.js"></script>
+        <title>Sitemap</title>
     </head>
     <body>
         <header>
@@ -32,7 +33,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active"><span><a href="/aboutUsPages.html">About&nbspus</a></span></li>
-                        <li>Company Introduction</li>
+                        <li>Company&nbspIntroduction</li>
                         <li>CEO Profile</li>
                         <li>Our Teams</li>
                         <li>Our Teachers</li>
@@ -47,8 +48,8 @@
                         <li class="active"><span><a href="/course.html">Course</a></span></li>
                         <li><span><a href="/courseDetailA.html">Course A</a></span></li>
                         <li><span><a href="/courseDetailA.html">Course B</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule A</a></span></li>
-                        <li><span><a href="/courseDetailA.html">Schedule B</a></span></li>
+                        <li><span><a href="/courseDetailA.html">Schedule&nbspA</a></span></li>
+                        <li><span><a href="/courseDetailA.html">Schedule&nbspB</a></span></li>
                     </ul>
                 </div></li>
                 <li><div class="dropup">
@@ -57,7 +58,7 @@
                         <div class="caret"></div>
                     </div>
                     <ul class="menu">
-                        <li class="active"><span><a href="/contactUsPagees.html">Contact Us!</a></span></li>
+                        <li class="active"><span><a href="/contactUsPagees.html">Contact&nbspUs!</a></span></li>
                         <li>Company</li>
                         <li>Events</li>
                         <li>Social media</li>
@@ -70,7 +71,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active">Gallery</li>
-                        <li>E-Learning</li>
+                        <li>E-&nbspLearning</li>
                         <li>Teams</li>
                         <li>Company Office</li>
                     </ul>
@@ -98,7 +99,7 @@
             <div class="articleBg">
                 <h1 style="color: cornflowerblue;">Sitemap</h1>
             <section class="first">
-                <h2 style="text-align: center; padding: 0;">Home</h2>
+                <h2 style="text-align: center; padding: 0;"><a href="/homePages.html" style="color: black;">Home</a></h2>
                 
                     <p>Welcome</p>
                     <p>Partners</p>
@@ -156,6 +157,14 @@
            
             <!---Script-->
             <script src="homePages.js"></script>
+            <script>
+                $(document).ready(function(){
+        $("center").click(function(){
+        $(".menu").removeClass("menu-open")
+        $(".select").removeClass("select-clicked")
+    });
+});
+            </script>
             </div>
     </article>
     </article></center>

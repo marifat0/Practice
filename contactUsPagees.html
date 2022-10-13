@@ -4,7 +4,8 @@
         <link rel="stylesheet" href="commonFeatures.css">
         <link rel="stylesheet" href="contactUs.css">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+        <script src="/jquery-3.6.1.js"></script>
+        <title>Contact - Us</title>
     </head>
     <body>
         <header>
@@ -32,7 +33,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active"><span><a href="/aboutUsPages.html">About&nbspus</a></span></li>
-                        <li>Company Introduction</li>
+                        <li>Company&nbspIntroduction</li>
                         <li>CEO Profile</li>
                         <li>Our Teams</li>
                         <li>Our Teachers</li>
@@ -57,7 +58,7 @@
                         <div class="caret"></div>
                     </div>
                     <ul class="menu">
-                        <li class="active"><span><a href="/contactUsPagees.html">Contact Us!</a></span></li>
+                        <li class="active"><span><a href="/contactUsPagees.html">Contact&nbspUs!</a></span></li>
                         <li>Company</li>
                         <li>Events</li>
                         <li>Social media</li>
@@ -70,7 +71,7 @@
                     </div>
                     <ul class="menu">
                         <li class="active">Gallery</li>
-                        <li>E-Learning</li>
+                        <li>E-&nbspLearning</li>
                         <li>Teams</li>
                         <li>Company Office</li>
                     </ul>
@@ -98,12 +99,12 @@
             <div class="articleBg articlePadding">
             <h1 style="font-family: monospace;">Any Doubts?<br>Just send us an email :-)</h1>
             <lottie-player src="/JSON/89874-contact-us.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-            <div class="dropup">
-                <div class="select contctUs">
-                    <span class="selected">E-mail</span>
-                    <div class="caret"></div>
+            <div class="dropup1">
+                <div class="select1 contctUs">
+                    <span class="selected1">E-mail</span>
+                    <div class="caret1"></div>
                 </div>
-                <ul class="menu men">
+                <ul class="menu1 men">
                     <li class="active">E-mail</li>
                     <li>Facebook</li>
                     <li>Twitter</li>
@@ -136,7 +137,67 @@
 
            
             <!---Script-->
-            <script src="homePages.js"></script>
+            <script>
+                const dropup = document.querySelectorAll('.dropup');
+                dropup.forEach(dropup => {
+const select = dropup.querySelector('.select');
+const caret = dropup.querySelector('.caret');
+const menu = dropup.querySelector('.menu');
+const option = dropup.querySelectorAll('.menu li');
+const selected = dropup.querySelector('.selected');
+
+select.addEventListener('click', () => {
+select.classList.toggle('select-clicked');
+caret.classList.toggle('caret-rotate');
+menu.classList.toggle('menu-open');
+});
+option.forEach(option => {
+    option.addEventListener('click', () => {
+    selected.innerText = option.innerText;
+    select.classList.remove('select-clicked');
+    caret.classList.remove('caret-rotate');
+    menu.classList.remove('menu-open');
+    // option.forEach(option => {
+    //     option.classList.remove('active');
+    // });
+    option.classList.add('active');
+});
+});
+});
+const dropup1 = document.querySelectorAll('.dropup1');
+dropup1.forEach(dropup => {
+const select = dropup.querySelector('.select1');
+const caret = dropup.querySelector('.caret1');
+const menu = dropup.querySelector('.menu1');
+const option = dropup.querySelectorAll('.menu1 li');
+const selected = dropup.querySelector('.selected1');
+
+select.addEventListener('click', () => {
+select.classList.toggle('select1-clicked');
+caret.classList.toggle('caret1-rotate');
+menu.classList.toggle('menu1-open');
+});
+option.forEach(option => {
+    option.addEventListener('click', () => {
+    selected.innerText = option.innerText;
+    select.classList.remove('select1-clicked');
+    caret.classList.remove('caret1-rotate');
+    menu.classList.remove('menu1-open');
+    // options.forEach(option => {
+    //     option.classList.remove('active');
+    // });
+    option.classList.add('active');
+});
+});
+});
+                //----LINE BORDER
+                $(document).ready(function(){
+        $("center").click(function(){
+        $(".menu").removeClass("menu-open")
+        $(".select").removeClass("select-clicked")
+    });
+});
+            </script>
             </div>
     </article>
     </article></center>

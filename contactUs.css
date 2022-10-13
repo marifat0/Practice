@@ -1,6 +1,42 @@
 .articleBg {
     background-color: white;
 }
+.dropup1 {
+    max-width: 12em;
+    position: relative;
+}
+.dropup1 * {
+    box-sizing: border-box;
+}
+.select1 {
+    background: rgba(0, 0, 0, 0,2);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px rgba(0, 0, 0, 0,2);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.select1-clicked {
+    box-shadow: 0 0 0.8em #26489a;
+}
+.select1:hover {
+    background: #01205e;
+}
+.caret1 {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+.caret1-rotate {
+    transform: rotate(180deg);
+}
 .contctUs {
     max-width: 10em;
     background-color: #2222f380 !important;
@@ -12,4 +48,40 @@
 .men {
     background-color: #4831cbfa !important;
     border: transparent !important;
+    max-width: 10em;
+    left: 8%;
+}
+.menu1 {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #01194a;
+    border: 1px #033cbf solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0,2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 0%;
+    transform: translateX(-50);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+.menu1 li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.menu1 li:hover {
+    background: #042d9e;
+}
+.active {
+    background: #162996;
+}
+.menu1-open {
+    display: block;
+    opacity: 1;
+    left: 8%;
 }

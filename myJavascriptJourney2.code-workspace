@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../myJavascriptJourney"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Practice"
+	}
+}
