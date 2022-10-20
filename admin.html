@@ -1,19 +1,214 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Admin - Page</title>
-        <script src="/script.js"></script>
-    </head>
-    <body>
-        <h1>Admin Page</h1>
-    </body>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <!-- <script src="/#script.js" defer></script> -->
+    <title>Admin - Page</title>
+    <!-- <script src="/#script.js" defer></script> -->
+</head>
+
+<body>
+    <h1>Admin Page</h1>
+    <div id="results">
+        <button id="refresh" value="Refresh">Refresh</button>
+        <button id="test" value="Test">Test</button>
+        <button id="update" value="Update">Update</button>
+    </div>
+    <form method="GET" id="myForms"><em>Data-Administrations</em><br>
+        <hr>
+        <details class="pingErr">
+            <summary id="err"></summary>
+            <p id="errMessage"></p>
+        </details>
+        <label for="neym" class="nameLab" style="margin-right: 65px;">Name</label>
+        :<input type="text" id="neym" value="" name="Name" aria-required="true" placeholder="Full name"><br>
+        <label for="ageU" class="ageLab" style="margin-right: 79px;">Age</label>
+        :<input type="number" name="Age" value="" id="ageU" placeholder="Age" min="1" max="100"><br>
+        <label for="telnum" class="phonumLab" style="margin-right: 3px;">Phone number</label>
+        :<input type="text" name="Phone Number" id="telnum" placeholder="Phone number"><br>
+        <label for="emailInput" class="e-mail" style="margin-right: 63px;">E-mail</label>
+        :<input type="email" name="Email" value="" id="emailInput" placeholder="E-mail"><br>
+        <label for="password" id="passwLab" style="margin-right: 38px;">Password</label>
+        :<input type="password" value="" name="Password" id="password" placeholder="Password">
+        <hr>
+        <em>Select a Course</em><br>
+        <label for="courseA">Course A</label>
+        <input type="radio" id="courseA" class="course" name="Course" value="Course A"><br>
+        <label for="courseB">Course B</label>
+        <input type="radio" id="courseB" class="course" name="Course" value="Course B"><br>
+        <button type="submit" id="submitt" class="submitBtn" value="Submit">Submit</button>
+    </form>
+    <a href="/registrationPage.html">Go back to Form</a>
+    <table style="border: 1px solid black;">
+        <thead style="border: 1px solid black;">
+            <tr style="border: 1px solid black;">
+                <td>No.</td>
+                <td style="width: 200px;">Name</td>
+                <td style="width: 80px;">Age</td>
+                <td style="width: 160px;">Phone number</td>
+                <td style="width: 170px;">E-mail</td>
+                <td style="width: 160px;">Password</td>
+                <td style="width: 140px;">Course</td>
+                <td style="width: 90px;">Modify</td>
+            </tr>
+        </thead>
+        <tbody id="putHere">
+        </tbody>
+    </table>
     <style>
         html {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
+
         h1 {
-            
             text-align: center;
         }
+
+        button {
+            padding: 1em 2em 1em 1em;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 16px;
+        }
+
+        input {
+            width: 700px;
+        }
     </style>
+    <script>
+        //-----------Script Here-----------
+        //---GET DATA FROM LOCALsTORAGE-----
+        loadContent()
+        function loadContent() {
+            let dataFromLocal = JSON.parse(localStorage.getItem('clients'));
+            console.log(dataFromLocal)
+            //DISPLAY THE DATA FROM LOCALSTORAGE
+            table = `<table>`
+            let number = 1;
+            for (const i in dataFromLocal) {
+                // changes here
+                let myObj = JSON.parse(dataFromLocal[i])
+                if (myObj == Object) {
+                    myObj = dataFromLocal;
+                    console.log(myObj)
+                    table += "<tr>"
+                    table += "<td>" + number + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Name + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Age + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Phone + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Email + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Passw + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Course + "</td>"
+                        + "<td>" + `<a href="javascript:void(0)" onclick="editData(${i})">Edit</a>&nbsp;` +
+                        `<a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>` + "</td>"
+                    table += "</tr>";
+                    number++
+                } else {
+                    // changes here
+                    const myObj = JSON.parse(dataFromLocal[i]);
+                    console.log(myObj)
+                    table += "<tr>"
+                    table += "<td>" + number + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Name + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Age + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Phone + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Email + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Passw + "</td>"
+                        + "<td>" + JSON.parse(dataFromLocal[i]).Course + "</td>"
+                        + "<td>" + `<a href="javascript:void(0)" onclick="editData(${i})">Edit</a>&nbsp;` +
+                        `<a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>` + "</td>"
+                    table += "</tr>";
+                    number++
+                }
+                document.getElementById('putHere').innerHTML = table;
+                table += "</table>"
+            }
+        }
+        document.getElementById('refresh').addEventListener('click', (e) => {
+            e.reload();
+            let dataFromLocal = JSON.parse(getItem('clients'));
+            console.log(dataFromLocal)
+            // DISPLAY THE DATA FROM LOCALSTORAGE
+            table = `<table>`
+            let number = 1;
+            for (const i in dataFromLocal) {
+                const myObj = JSON.parse(localStorage.getItem[(i)]);
+                console.log(myObj)
+                table += `<tr index="${number - 1}">`
+                table += "<td>" + number + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Name + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Age + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Phone + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Email + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Passw + "</td>"
+                    + "<td>" + JSON.parse(dataFromLocal[i]).Course + "</td>"
+                    + "<td>" + `<a href="javascript:void(0)" onclick="editData(${i})">Edit</a>&nbsp;` +
+                    `<a href="javascript:void(0)" onclick="deleteData(${i})">Delete</a>` + "</td>"
+                table += "</tr>";
+                number++
+            }
+            document.getElementById('putHere').innerHTML = table;
+            table += "</table>"
+        })
+        //myFUNCTION
+        let di = document.getElementsByTagName('tr').length
+        let tr = document.getElementsByTagName('tr');
+        console.log(di)
+        let id = di - 1;
+        console.log(id)
+        function editData(rid) {
+            id = rid;
+            let arr = getCrudData();
+            console.log(id);
+            console.log(arr);
+            let editThis = JSON.parse(arr[(id)]);
+            console.log(editThis);
+            document.getElementById('neym').value = editThis.Name
+            document.getElementById('ageU').value = editThis.Age
+            document.getElementById('telnum').value = editThis.Phone
+            document.getElementById('emailInput').value = editThis.Email
+            document.getElementById('password').value = editThis.Passw
+            document.querySelector('input[name=Course]').checked = editThis.Course
+        }
+        // const trIndex = di - id;
+        // console.log(trIndex);
+        function deleteData(rid) {
+            let getData = JSON.parse(localStorage.getItem('clients'));
+            id = rid
+            console.log(getData);
+            console.log(id);
+            getData.splice(id, 1);
+            localStorage.setItem('clients', JSON.stringify(getData));
+            loadContent()
+        }
+        let submitt = document.getElementById('submitt')
+        submitt.addEventListener('click', () => {
+            let red = id;
+            console.log(red)
+            let data = JSON.stringify({
+                Name: document.getElementById('neym').value,
+                Age: document.getElementById('ageU').value,
+                Phone: document.getElementById('telnum').value,
+                Email: document.getElementById('emailInput').value,
+                Passw: document.getElementById('password').value,
+                Course: document.querySelector('input[name=Course]:checked').value
+            });
+            let myarr = JSON.parse(localStorage.getItem('clients'));
+            console.log(myarr)
+            myarr.splice(red, 1, data)
+            let dataStorage = localStorage.setItem('clients', JSON.stringify(myarr));
+            console.log(dataStorage);
+        });
+        function getCrudData() {
+            let arr = JSON.parse(localStorage.getItem('clients'));
+            return arr;
+        }
+    </script>
+</body>
+
 </html>

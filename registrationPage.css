@@ -33,8 +33,8 @@ input {
     font-size: 14px;
     width: 100px;
     padding: 7.8px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-family:sans-serif;
+    font-weight: 500;
 }
 .submitBtn:hover {
     background-color: #507df7;
@@ -44,4 +44,7 @@ input {
     color: red;
     cursor: pointer;
     display: none;
+}
+#ageU {
+    width: 4em;
 }

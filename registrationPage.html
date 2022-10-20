@@ -112,28 +112,28 @@
             <div class="articleBg articlePadding">
 
             <section id="firstSection" class="section1">
-                <form action="#" method="get" id="form" name="newUsers"><em>Please fill this form</em><br><hr>
+                <form method="GET" id="myForms"><em>Please fill this form</em><br><hr>
                     <details class="pingErr">
                         <summary id="err"></summary>
                         <p id="errMessage"></p>
                     </details>
-                    <label for="name" class="nameLab" style="margin-right: 65px;">Name</label>
-                    :<input type="text" id="neym" name="Name" aria-required="true"><br>
-                    <label for="age" class="ageLab" style="margin-right: 79px;">Age</label>
-                    :<input type="text" name="age" id="ageU"><br>
-                    <label for="phone-num" class="phonumLab" style="margin-right: 3px;">Phone number</label>
-                    :<input type="tel" name="phoneNumber" id="telnum"><br>
-                    <label for="email" class="e-mail" style="margin-right: 63px;">E-mail</label>
-                    :<input type="email" name="email" id="emailInput"><br>
-                    <label for="password" id="password" style="margin-right: 38px;">Password</label>
-                    :<input type="password" name="password" id="password">
+                    <label for="neym" class="nameLab" style="margin-right: 65px;">Name</label>
+                    :<input type="text" id="neym" value="" name="Name" aria-required="true" placeholder="Full name"><br>
+                    <label for="ageU" class="ageLab" style="margin-right: 79px;">Age</label>
+                    :<input type="number" name="Age" value="" id="ageU" placeholder="Age" min="1" max="100"><br>
+                    <label for="telnum" class="phonumLab" style="margin-right: 3px;">Phone number</label>
+                    :<input type="text" name="Phone Number" id="telnum" placeholder="Phone number"><br>
+                    <label for="emailInput" class="e-mail" style="margin-right: 63px;">E-mail</label>
+                    :<input type="email" name="Email" value="" id="emailInput" placeholder="E-mail"><br>
+                    <label for="password" id="passwLab" style="margin-right: 38px;">Password</label>
+                    :<input type="password" value="" name="Password" id="password" placeholder="Password">
                     <hr>
                     <em>Select your Course</em><br>
                     <label for="courseA">Course A</label>
-                    <input type="radio" id="courseA" name="course" value="CourseA"><br>
-                    <label for="courseA">Course B</label>
-                    <input type="radio" id="courseB" name="course" value="CourseB"><br>
-                    <input type="submit" id="submitt" class="submitBtn">
+                    <input type="radio" id="courseA" class="course" name="Course" value="Course A"><br>
+                    <label for="courseB">Course B</label>
+                    <input type="radio" id="courseB" class="course" name="Course" value="Course B"><br>
+                    <input type="submit" id="submitt" class="submitBtn" value="Submit">
                 </form>
                 <hr>
                 <p>Get to coding</p>
@@ -153,6 +153,7 @@
         $(".select").removeClass("select-clicked")
     });
 });
+// SCRIPT 4 LOCALSTORAGE-----
             </script>
             </div>
     </article>
